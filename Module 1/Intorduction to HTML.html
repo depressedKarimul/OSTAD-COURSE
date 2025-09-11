@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE: Defines this document as HTML5. 
+  Always the very first line in HTML.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- UTF-8 supports almost all characters/symbols -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures responsive layout on mobile devices -->
+  
+  <title>MERN Class - 1</title>
+  <!-- Title: Appears in browser tab -->
+</head>
+<body>
+  <!-- ============================= -->
+  <!--      BASIC INTRODUCTION       -->
+  <!-- ============================= -->
+  Hey I'm Shuvoo. A software engineer.
+
+  <!-- ============================= -->
+  <!--       TAG BASICS OVERVIEW     -->
+  <!-- ============================= -->
+
+  <!-- 
+    HTML tags are building blocks.
+    - Non-empty tags have both opening <tag> and closing </tag>.
+    - Empty tags are self-closing.
+  -->
+
+  <!-- Non-Empty Tag -->
+  <div>
+    HTML tag  
+    <!-- Child Tag (nested inside parent) -->
+    <div></div>   
+  </div>
+
+  <!-- Empty Tags (no closing tag needed) -->
+  <br />  <!-- Creates a line break -->
+  <hr />  <!-- Creates a horizontal divider line -->
+
+  <!-- Multiple divs (block-level container for grouping content) -->
+  <div>Div 1 tag</div>
+  <div>Div 2 tag</div>
+  <div>Div 3 tag</div>
+  <div>Div 4 tag</div>
+
+  <!-- Span (inline container, useful for styling text without breaking line) -->
+  <span>span 1</span>
+  <span>span 2</span>
+
+
+  <!-- ============================= -->
+  <!--     TYPOGRAPHICAL ELEMENTS    -->
+  <!-- ============================= -->
+
+  <!-- Headings: Used for titles. SEO & structure friendly. -->
+  <h1>Main Article</h1>
+  <!-- h1 is the main title, only one per page ideally -->
+  <!--
+    <h2>Subheading</h2>
+    <h3>Section heading</h3>
+    <h4>Smaller heading</h4>
+    <h5>Sub-sub section</h5>
+    <h6>Smallest heading</h6>
+  -->
+
+  <!-- Paragraphs: Used for blocks of text -->
+  <p>
+    <h2>Level 2 title</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    <strong>Vero corporis nostrum porro vitae itaque facere</strong>. <!-- Strong: important/bold -->
+    <i>Corporis culpa exercitationem minima ad aliquam delectus aspernatur dolores laboriosam.</i> <!-- Italics: emphasis -->
+    <u>Eveniet voluptatum sunt harum maxime, vel ducimus tenetur quis omnis sint, voluptates rerum quae!</u> <!-- Underline -->
+  </p>  
+  
+  <p>
+   <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small> <!-- Small: side note or fine print -->
+   Vero corporis nostrum porro vitae itaque facere. Corporis culpa exercitationem minima ad aliquam delectus aspernatur dolores laboriosam.
+   Eveniet voluptatum sunt harum maxime, vel ducimus tenetur quis omnis sint, voluptates rerum quae!
+  </p>
+  
+
+  <!-- ============================= -->
+  <!--            LISTS              -->
+  <!-- ============================= -->
+
+  <!-- Ordered List: When order matters (steps, rankings, instructions) -->
+  <ol>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+  </ol>
+
+  <!-- Unordered List: When order does not matter (features, bullets, options) -->
+  <ul>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+    <li>Shuvo</li>
+  </ul>
+
+
+  <!-- ============================= -->
+  <!--         MULTIMEDIA TAGS       -->
+  <!-- ============================= -->
+
+  <!-- Images: Add visuals, diagrams, photos -->
+  <img src="https://30dayscoding.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F3pv3o0yr6pgj%2F7qixtK8KRrnkJalWNJ1RMk%2F61dbe1a62bc14aa7244bb8e6ce12f237%2FMERN_Fullstack__1_.jpg&w=1920&q=75" 
+       alt="MERN Image"
+       height="300" width="auto">
+  
+  <!-- Local image example -->
+  <img src="./images/swarnaa.jpg" 
+       alt="Local image"
+       height="300" width="auto">
+
+  <!-- Video: Supports mp4/webm/ogg. "controls" adds play/pause UI -->
+  <video src="./videos/sr.mp4"
+         controls
+         height="300" width="auto"></video>
+  
+  <!-- Video hosted online -->
+  <video src="https://videocdn.cdnpk.net/videos/bf7dc9b7-ac8a-477f-b465-67d080abac43/horizontal/previews/clear/large.mp4?token=exp=1757569891~hmac=e2898203b75f65140b5d254991fb7ff744fcd786b0f544ee12daf5d7bb72f7dc"
+         controls
+         height="300" width="auto"></video>
+
+  <!-- Embedding YouTube using iframe -->
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/g2hPcqacSJM?si=WCDJjFePI3_U2M3o" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+
+  <!-- Audio: Add sound/music. Supports mp3/wav/ogg. -->
+  <audio src="./videos/sr.mp4" controls></audio>
+  
+
+  <!-- ============================= -->
+  <!--        SEMANTIC TAGS          -->
+  <!-- ============================= -->
+
+  <!-- Semantic tags give meaning to structure (better for SEO & accessibility) -->
+  <nav></nav>       <!-- Navigation links -->
+  <section></section> <!-- A section of content -->
+  <article></article> <!-- Independent, reusable article/post -->
+  <footer></footer>   <!-- Footer of page -->
+</body>
+</html>
