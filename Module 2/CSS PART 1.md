@@ -204,7 +204,10 @@ a.external::after {
 
 ```
 
-### 5. Box Model
-### 6. Margin, Padding, Border Properties
-### 7. Display: Block, inline-block,and inline
+### 4. Box Model
+### 5. Margin, Padding, Border Properties
+### 6. Display: Block, inline-block,and inline
+### 7. Background color, height,width, min-height, min-width
+### 8. Layout algorithm or modules: inline or Flow MOdule
+### 9. Layout algorithm or models: Positioned Mode (absolute, relative, etc)
 

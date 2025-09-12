@@ -58,12 +58,38 @@ selector2 {
 [data-size] {
   border: 1px solid gray;  // This styles any element with a "data-size" attribute (e.g., <div data-size="large">) with a gray border.
 } */
+html,body {
+  margin: 0;
+  direction: rtl;
+}
 
-/* .box {
-  background-color: black;  // This is another rule for .box, setting the background to black.
-  color: white;            // The text inside .box will be white.
-  margin-bottom: 100px;    // Adds 100 pixels of space below .box elements.
-  padding: 20px;           // Adds 20 pixels of padding inside .box, giving space between the content and border.
-  border: 10px dashed rebeccapurple; // Adds a 10-pixel dashed border in rebeccapurple (a purplish color).
-} */
+
+ .box {
+  background-color: black; 
+  color: white;            
+  margin-bottom: 100px;    
+  padding: 20px;          
+  border: 10px dashed red;
+} 
+
+
+/* display: block , inline, inline-block */
+
+/* Characteristics of Block Elements:
+   1. Occupies the full available width.
+   2. Supports margin, padding, height, and width.
+   3. Always starts on a new line. */
+
+  /* Characteristics of Inline Elements:
+   1. Occupies only as much width as its content.
+   2. Supports left/right margin and padding.
+   3. Does NOT support top/bottom margin or height/width.
+   4. Does not start on a new line; flows inline with text. */
+
+
+  /* Characteristics of Inline-Block Elements:
+   1. Occupies only as much width as its content (like inline).
+   2. Supports margin, padding, height, and width (like block).
+   3. Does not start on a new line; flows inline with text.
+   4. Useful for creating layouts where elements align side by side but still keep box properties. */
 
