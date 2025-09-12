@@ -1,0 +1,69 @@
+/* This is a CSS (Cascading Style Sheets) document that explains how to style web pages.
+   CSS is like giving instructions to a website on how things should look, like colors, sizes, and positions.
+   Below, I'll break down the code with easy-to-understand comments! */
+
+/* selector1 {
+  property: value;  // This is a placeholder for a CSS rule. "selector1" could be something like "p" (paragraph) or ".box" (a class).
+  property: value;  // Here, "property" is something you want to change (e.g., color, size), and "value" is what you set it to (e.g., blue, 20px).
+  property: value;  // You can add as many property-value pairs as you want to style the selected element.
+  property: value;  // This controls the look of all elements that match "selector1".
+  property: value;  // For example, it could make all paragraphs blue and bold.
+} 
+
+selector2 {
+  property: value;  // Another placeholder for a different selector, like "h1" (heading) or "#main" (an ID).
+  property: value;  // This section styles a different group of elements based on "selector2".
+  property: value;  // It works the same way, with properties and values to change the appearance.
+  property: value;  // This could make headings red or add a border, for instance.
+  property: value;  // Each selector can have its own unique styles.
+} 
+*/
+
+/* pros 
+1. Dev friendly  // This means CSS is easy for developers to use because it's simple to write and understand.
+2. Caching       // Caching helps websites load faster by saving styles in the browser's memory for reuse. */
+
+/* cons 
+1.               // This section is incomplete, but a "con" might be that CSS can get messy if not organized well. */
+
+/* div {
+  background-color: black;  // This styles all <div> elements (containers on a webpage) with a black background.
+  color: azure;            // It also makes the text inside <div> elements the color azure (a light blue).
+} */
+/* 
+.box {
+  background-color: green;  // This styles elements with the class "box" (e.g., <div class="box">) with a green background.
+  color: wheat;            // The text inside .box elements will be wheat (a light brown) color.
+}
+
+.box {
+  background-color: yellow;  // Another rule for .box, but this one changes the background to yellow.
+  color: rgb(215, 179, 245); // The text color changes to a purple shade using RGB values.
+}
+
+.box {
+  margin-bottom: 20px;  // This adds space below .box elements, pushing the next element down by 20 pixels.
+}
+
+.box-span {
+  color: red;           // This styles elements with class "box-span" (e.g., <span class="box-span">) with red text.
+  background-color: rgb(128, 19, 0); // The background is set to a dark reddish-brown using RGB.
+} */
+
+/* #box1 {
+  background-color: black;  // This styles a single element with ID "box1" (e.g., <div id="box1">) with a black background.
+  color: white;            // The text inside #box1 will be white.
+}
+
+[data-size] {
+  border: 1px solid gray;  // This styles any element with a "data-size" attribute (e.g., <div data-size="large">) with a gray border.
+} */
+
+/* .box {
+  background-color: black;  // This is another rule for .box, setting the background to black.
+  color: white;            // The text inside .box will be white.
+  margin-bottom: 100px;    // Adds 100 pixels of space below .box elements.
+  padding: 20px;           // Adds 20 pixels of padding inside .box, giving space between the content and border.
+  border: 10px dashed rebeccapurple; // Adds a 10-pixel dashed border in rebeccapurple (a purplish color).
+} */
+
