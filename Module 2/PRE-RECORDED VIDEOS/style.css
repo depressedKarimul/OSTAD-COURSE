@@ -1,0 +1,92 @@
+/* 1 introduction to css */
+/* h4 {
+  color: aqua;
+  font-size: 58px;
+} */
+
+
+/*     <!-- 2  how to add css to html (inline, internal , exte)-->*/
+
+/* p {
+  font-size: 50px;
+  color: red;
+} */
+
+
+/* 3  CSS Syntax and Selectors */
+
+/* p {
+  color: blue;
+  font-size: 50px;
+}
+
+h1 {
+  color: red;
+  font-size: 60px;
+} */
+
+
+
+/* .myClass {
+  color: red;
+  font-size: 30px;
+} */
+
+/* #myId {
+  color: red;
+  font-size: 50px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* h2,h3,h4 {
+  color: red;
+  font-size: 30;
+} */
+
+
+/* div > section> h2 {
+  color: red;
+  font-size: 50px;
+} */
+
+/* div section h2 {
+  color: red;
+  font-size:  50px;
+}
+
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rebeccapurple;
+  padding: 24px 30px;
+} */
+
+
+/* .myClass h2:first-child {
+  color: red;
+}
+
+.myClass h2:last-child {
+  color: brown;
+}
+
+ol li:first-child {
+  color: chartreuse;
+}
+
+ol li:last-child {
+  color: rgb(217, 168, 62);
+} */
