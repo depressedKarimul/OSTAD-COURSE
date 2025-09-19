@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21 CSS Grid Basics (Rows Columns Gaps).htm</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .grid-container {
+        display: grid;
+        /* grid-template-columns: 200px 200px 200px ; */
+        /* grid-template-columns: auto; */
+        /* grid-template-rows: 100px 100px 100px; */
+
+        /* grid-template-columns: repeat(4,1fr); */
+
+        grid-template-columns: 2fr 1fr;
+
+        grid-template-rows:auto;
+        /* gap: 10px; */
+        /* row-gap: 20px;
+        column-gap: 40px; */
+        gap: 20px 40px;
+        /* gap: row col; */
+
+        background-color: antiquewhite;
+        padding: 10px;
+      }
+
+
+      .grid-item {
+        background-color: aqua;
+        color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Item 1</div>
+      <div class="grid-item">Item 2</div>
+      <div class="grid-item">Item 3</div>
+      <div class="grid-item">Item 4</div>
+      <div class="grid-item">Item 5</div>
+      <div class="grid-item">Item 2</div>
+      <div class="grid-item">Item 3</div>
+      <div class="grid-item">Item 4</div>
+      <div class="grid-item">Item 5</div>
+    </div>
+  </body>
+</html>
