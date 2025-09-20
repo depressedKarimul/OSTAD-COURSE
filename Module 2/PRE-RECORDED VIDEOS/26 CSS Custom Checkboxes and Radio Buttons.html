@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Checkbox</title>
+
+  <style>
+
+    /* not complete  */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    /* Label wrapper */
+    .custom-checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Hide default checkbox */
+    .custom-checkbox input {
+      display: none;
+    }
+
+    /* Custom box */
+    .checkmark {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #007bff;
+      border-radius: 4px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    /* Checked background */
+    .custom-checkbox input:checked + .checkmark {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    /* Checkmark shape */
+    .custom-checkbox input:checked + .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 6px;
+      height: 12px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Proper label + input with ID -->
+  <label for="agree" class="custom-checkbox">
+    <input type="checkbox" id="agree" />
+    <span class="checkmark"></span>
+    I agree to the terms and conditions
+  </label>
+
+</body>
+</html>
