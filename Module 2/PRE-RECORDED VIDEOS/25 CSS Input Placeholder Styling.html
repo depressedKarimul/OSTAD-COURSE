@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25. CSS Input Placeholder Styling</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+/* Modern browsers (Default support) */
+::placeholder {
+  color: red;
+  font-style: italic;
+}
+
+/* Chrome, Safari, Opera এর জন্য */
+::-webkit-input-placeholder { 
+  color: red;
+  font-style: italic;
+}
+
+/* Firefox (পুরোনো ভার্সন) এর জন্য */
+::-moz-placeholder {
+  color: red;
+  font-style: italic;
+}
+
+/* Internet Explorer 10-11 এর জন্য */
+:-ms-input-placeholder {
+  color: red;
+  font-style: italic;
+}
+
+/* Microsoft Edge (পুরোনো) এর জন্য */
+::-ms-input-placeholder {
+  color: red;
+  font-style: italic;
+}
+
+
+  </style>
+
+
+</head>
+<body>
+
+
+    <h2>CSS Placeholder Styling উদাহরণ</h2>
+  <input type="text" placeholder="আপনার নাম লিখুন">
+
+
+</body>
+</html>
