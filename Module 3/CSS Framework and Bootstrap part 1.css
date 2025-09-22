@@ -1,0 +1,82 @@
+/* <!-- Transform Properties --> */
+
+body {
+  margin: 0;
+  position: relative;
+  height: 100vh;
+   width: 100vw;
+   background-color: cyan;
+   
+
+    
+
+}
+
+/* body:hover .box {
+    transform: translate(-100%,0);
+
+} */
+
+.box {
+  background-color: black;
+  height: 200px;
+  /* height: 100vh; */
+  width: 200px;
+
+  margin-top:200px ;
+  margin-left: 200px;
+
+  /* position: absolute;
+  left: 100%;
+  top: 0; */
+
+  /* transfrom */
+
+  /* transform: translate(100px,100px); */
+
+  /* transition: transform 0.3s ease; */
+  /* transform: rotate(45deg); */
+
+  /* transform: scale(2); */
+
+  transform: skew(20deg, 20deg);
+
+}
+
+
+/* 2. **Typography Styles** */
+.box2 {
+   /* height: 200px; */
+  /* height: 100vh; */
+  /* width: 200px; */
+  background-color: white;
+
+  /* margin-top:200px ;
+  margin-left: 200px; */
+
+  /* <!-- 2. **Typography Styles** --> */
+      font-family: "Roboto", sans-serif;
+
+      /* font-size: 48px; */
+      font-weight: 700;
+      font-style: italic;
+
+      text-align: center;
+      /* text-align: center; */
+
+      /* text-decoration: line-through;
+       */
+
+       /* text-transform: capitalize; */
+
+       /* line-height: 50px; */
+
+       line-height: 1.5;
+       letter-spacing: 5px;
+       word-spacing: 20px;
+}
+
+
+/* Unit */
+
+/* px, em, rem, pt, vh, vw, % */
