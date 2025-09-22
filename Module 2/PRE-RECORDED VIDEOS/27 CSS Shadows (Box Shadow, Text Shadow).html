@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>27. CSS Shadows (Box Shadow, Text Shadow)</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 50px auto;
+
+        /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* text-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+
+      .text {
+        font-size: 40px;
+        font-weight: bold;
+        color: blue;
+        margin-top: 50px;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .self-box {
+        height: 200px;
+        width: 400px;
+        background-color: rgba(38, 42, 33, 0.77);
+        box-shadow: 22px 22px 1px -6px rgba(0,0,0,1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Hello world</div>
+
+    <div class="text">Hello World</div>
+
+    <div class="self-box"></div>
+  </body>
+</html>
