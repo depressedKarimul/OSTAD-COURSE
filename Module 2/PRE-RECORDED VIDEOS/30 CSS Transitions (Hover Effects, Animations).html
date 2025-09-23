@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30. CSS Transitions (Hover Effects, Animations)</title>
+
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.5s linear 0.3s;
+
+           /* linear → 🔗 (straight line, uniform)
+
+      ease → ⬆️➡️⬇️ (smooth start and end, fast middle)
+
+      ease-in → 🚗💨 (starts slow, accelerates)
+
+      ease-out → 🛑 (starts fast, slows down)
+
+      ease-in-out → 🚀✈️🛬 (slow start, fast middle, slow end) */
+
+          }
+          button:hover {
+            background-color: darkred;
+            transform: scale(2);
+          }
+
+
+          .box {
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            position: relative;
+            animation: moveRight 2s infinite alternate-reverse;
+
+          }
+
+          @keyframes moveRight {
+            0%{
+              left: 0;
+
+            }
+            50% {
+              left: 50%;
+            }
+            100%{
+              left: 100%;
+            }
+          }
+
+    </style>
+  </head>
+  <body>
+    <button>Hover Me</button>
+
+   <div class="box"></div>
+
+
+  </body>
+</html>
