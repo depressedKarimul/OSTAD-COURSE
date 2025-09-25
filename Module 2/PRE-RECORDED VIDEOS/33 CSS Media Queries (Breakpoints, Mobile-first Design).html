@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Queries (Breakpoints, Mobile-first Design)</title>
+
+    <style>
+      body {
+        background-color: white;
+        font-size: 50px;
+      }
+
+      /* @media  (max-width: 768px) {
+      body {
+        background-color: blue;
+      }
+      
+    } */
+
+      /* mobil-first */
+
+      @media (min-width: 768px) {
+        body {
+          background-color: red;
+          font-size: 40px;
+        }
+      }
+
+      /* Desktop-first */
+      /* @media (max-width: 768) {
+        body {
+          background-color: red;
+          font-size: 40px;
+        }
+      } */
+    </style>
+  </head>
+
+  <body>
+    <h3>Hello</h3>
+  </body>
+</html>
