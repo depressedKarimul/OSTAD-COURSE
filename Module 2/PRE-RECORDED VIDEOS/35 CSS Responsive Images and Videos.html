@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>35. CSS Responsive Images and Videos</title>
+
+  <style>
+    img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+   .video-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    margin: auto;
+    object-fit: cover;
+   }
+
+   iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+   }
+  </style>
+</head>
+<body>
+
+  <h2>Responsive Image Example</h2>
+  <img src="assests/Gemini_Generated_Image_rir1w0rir1w0rir1.png" alt="">
+
+
+<div class="video-container">
+
+  
+  <iframe src="https://www.youtube.com/embed/U_TdXhfdFqk?si=e2J8Zljh8f6rzdS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+  
+</body>
+</html>
