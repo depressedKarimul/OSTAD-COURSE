@@ -15,3 +15,17 @@
 .about p {
   text-align: justify;
 }
+
+.card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgb(53, 53, 0.15) ;
+}
+
+
+
+
