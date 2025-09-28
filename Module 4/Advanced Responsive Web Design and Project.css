@@ -1,0 +1,17 @@
+.hero {
+        background: linear-gradient(135deg, #6210ba 0%, #4588fc 100%);
+        padding: 100px;
+        color: white;
+      }
+
+      .hero .btn {
+        transition: all 0.3s ease;
+      }
+
+      .hero .btn:hover {
+        transform: scale(1.1);
+      }
+
+.about p {
+  text-align: justify;
+}
