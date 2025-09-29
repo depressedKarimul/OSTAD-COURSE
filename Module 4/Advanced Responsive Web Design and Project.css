@@ -26,6 +26,18 @@
   box-shadow: 0 8px 20px rgb(53, 53, 0.15) ;
 }
 
+.footer {
+  background: linear-gradient(135deg, #6210ba 0%, #81acf7 100%);
+ 
+}
 
-
+.footer a  {
+ margin: 0 15px;
+ color: black;
+ transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: aliceblue;
+  
+}
 
