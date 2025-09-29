@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Grid Alignment and Auto Layout</title>
+
+    <link rel="stylesheet" href="./bootstrap.css" />
+  </head>
+  <body>
+    <!-- Grid system  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">Col 6</div>
+        <div class="col-6">Col 6</div>
+      </div>
+    </div>
+
+    <!-- vertical alignment -->
+
+    <div class="container">
+      <div class="row align-items-center bg-secondary" style="height: 200px">
+        <div class="col-6 bg-primary">Col 6</div>
+      </div>
+    </div>
+
+    <!-- Horizontal Alignment -->
+
+    <div class="container mt-2">
+      <div class="row justify-content-center bg-secondary">
+        <div class="col-6 bg-danger text-white">Col-6</div>
+      </div>
+    </div>
+
+
+    <!-- auto layout  -->
+
+    <div class="container mt-2">
+      <div class="row justify-content-center bg-secondary">
+        <div class="col bg-danger text-white">Col-6</div>
+      </div>
+    </div>
+
+
+
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
