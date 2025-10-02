@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-color: #FF6600;
+  --secondary-color: #000000;
+}
+
+/* html {
+  height: 300vh;
+} */
+
+
+/* NavBar */
+
+nav {
+  font-family: Poppins;
+  
+ 
+
+  .nav-form {
+
+  a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  button {
+    background-color: var(--primary-color);
+    transition: all 0.2s linear;
+  }
+
+  button:hover {
+    background-color: var(--secondary-color);
+   
+  }
+
+}
+
+
+}
+
