@@ -1,0 +1,19 @@
+git init
+
+git log
+
+git status 
+
+git add .
+
+
+git log --oneline
+
+git diff --cached
+
+
+ git branch
+ git branch feature-1
+
+
+  git checkout feature-1

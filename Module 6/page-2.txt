@@ -1,0 +1,10 @@
+This is page 2
+
+<<<<<<< HEAD
+Modifying for copy 3
+=======
+Feature 2 commit 1 
+
+
+
+>>>>>>> feature-2
