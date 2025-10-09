@@ -1,125 +1,153 @@
 /* 
 ===========================================
 📘 JavaScript Full Basics Documentation
-Author: S M Karimul Hassan
-===========================================
 
-🧠 Topics Covered:
-1️⃣ JavaScript Introduction
-2️⃣ Variables
-3️⃣ Operators
-4️⃣ Comments
-5️⃣ Data Types
-6️⃣ If-Else Statements
-7️⃣ Switch Case Statements
-8️⃣ For Loops
-9️⃣ While Loops
-🔟 Do-While Loops
-1️⃣1️⃣ For-In Loops
+===========================================
+💡 Topics:
+1. JavaScript Introduction
+2. Variables
+3. Operators
+4. Comments
+5. Data Types (Primitive + Non-Primitive)
+6. If-Else Statements
+7. Switch Case
+8. For Loop
+9. While Loop
+10. Do-While Loop
+11. For-In Loop
 ===========================================
 */
 
 
 // ===========================================
-// 1️⃣ JavaScript Introduction 💡
+// 1️⃣ JavaScript Introduction
 // ===========================================
+// JavaScript is a programming language used to make web pages interactive.
 
-// JavaScript is a high-level, dynamic programming language
-// used to make websites interactive, functional, and smart.
-
-console.log("Hello World! 👋"); // Prints output to console
-console.log(4 + 5); // Basic arithmetic operation
-
+console.log("Hello World");
+console.log(4 + 5);
 
 // ===========================================
-// 2️⃣ Variables in JavaScript 🧩
+// 2️⃣ Variables
 // ===========================================
+// Variables store data values. Use let, const, or var.
 
-// Variables are used to store data values.
-// We can declare variables using let, const, or var.
-
-let name = "Hassan";
-const age = 22;
-var country = "Bangladesh";
+let name = "Karimul";   // String
+const age = 22;         // Constant (cannot be changed)
+var country = "Bangladesh"; // Global scope variable (older use)
 
 console.log(name, age, country);
 
 
 // ===========================================
-// 3️⃣ Operators in JavaScript ➕➖
+// 3️⃣ Operators ⚙️
 // ===========================================
+// Operators perform operations on values and variables.
 
-// Arithmetic Operators: +, -, *, /, %, **
 let x = 10;
-let y = 3;
+let y = 5;
+
 console.log("Addition:", x + y);
 console.log("Subtraction:", x - y);
 console.log("Multiplication:", x * y);
 console.log("Division:", x / y);
-console.log("Remainder:", x % y);
-console.log("Power:", x ** y);
-
-// Comparison Operators: >, <, >=, <=, ==, ===, !=, !==
-console.log(x > y);
-console.log(x === 10);
-
-// Logical Operators: &&, ||, !
-console.log(x > 5 && y < 5);
-console.log(!(x < 5));
+console.log("Modulus:", x % y);
+console.log("Comparison:", x > y);
+console.log("Logical:", x > 5 && y < 10);
 
 
 // ===========================================
-// 4️⃣ Comments in JavaScript 💬
+// 4️⃣ Comments 💬
 // ===========================================
+// Comments make code readable and are ignored by the compiler.
+// Single-line comment → //
+// Multi-line comment → /*  */
 
-// Single-line comment → // Used for one-line notes
-/* 
-Multi-line comment → Used for explaining 
-multiple lines or sections in detail 
-*/
+// Example:
+// This is a single-line comment
+/* This is a
+   multi-line comment */
 
 
 // ===========================================
 // 5️⃣ Data Types 🧠
 // ===========================================
+// JavaScript has two main categories of data types:
+// 👉 Primitive and Non-Primitive (Reference)
 
-// JavaScript has 7 primitive data types:
-// Number, String, Boolean, Undefined, Null, Symbol, BigInt
+
+// -------------------------------------------
+// 5️⃣.1 Primitive Data Types
+// -------------------------------------------
 
 let num = 10;                  // Number
 let str = "Hello";             // String
 let isTrue = true;             // Boolean
 let notDefined;                // Undefined
 let emptyValue = null;         // Null
+let uniqueId = Symbol("id");   // Symbol (unique value)
+let bigNum = 9007199254740991n; // BigInt (large integer)
 
-console.log(typeof num);
-console.log(typeof str);
-console.log(typeof isTrue);
+console.log("Primitive Types:");
+console.log(typeof num, typeof str, typeof isTrue, typeof notDefined, typeof emptyValue, typeof uniqueId, typeof bigNum);
+
+
+// -------------------------------------------
+// 5️⃣.2 Non-Primitive Data Types (Reference) 🧩
+// -------------------------------------------
+
+// 🔸 Object → Used to store data in key-value pairs
+let student = {
+  name: "Hassan",
+  age: 22,
+  dept: "CSE",
+};
+console.log("Object Example:", student);
+console.log("Access value:", student.name);
+
+// 🔸 Array → Ordered collection of items
+let fruits = ["Apple", "Mango", "Banana"];
+console.log("Array Example:", fruits);
+console.log("Access 2nd item:", fruits[1]);
+
+// 🔸 Function → Block of reusable code
+function greet() {
+  return "Hello from Function 👋";
+}
+console.log("Function Example:", greet());
+console.log("Function Type:", typeof greet);
+
+
+// ✅ All Non-Primitive data types are *objects* in JS
+console.log(typeof fruits);   // object
+console.log(typeof student);  // object
+console.log(typeof greet);    // function (special object)
 
 
 // ===========================================
-// 6️⃣ If-Else Statements 🧭
+// 6️⃣ If-Else Statement 🔀
 // ===========================================
+// Used for decision making in JS.
 
-// Used to perform actions based on conditions
+let number = 2;
 
-let number = 8;
-
-if (number % 2 === 0) {
-  console.log("Even Number");
+if (number % 2 == 0) {
+  console.log("Even number");
+} else if (number % 2 != 0) {
+  console.log("Odd number");
 } else {
-  console.log("Odd Number");
+  console.log("Not a valid number");
 }
 
 
 // ===========================================
-// 7️⃣ Switch Case Statements 🔁
+// 7️⃣ Switch Case 🧭
 // ===========================================
-
-// Used as an alternative to multiple if-else blocks
+// Used when you have multiple possible values to check.
 
 function whichNumber() {
-  return 4;
+  let num = 4;
+  return num;
 }
 
 switch (whichNumber()) {
@@ -142,25 +170,22 @@ switch (whichNumber()) {
 
 
 // ===========================================
-// 8️⃣ For Loop 🔂
+// 8️⃣ For Loop 🔁
 // ===========================================
-
-// Used when you know how many times to repeat
+// Used when you know how many times to run the loop.
 
 function doForLoop() {
   for (let i = 1; i <= 5; i++) {
     console.log("For Loop Count:", i);
   }
 }
-
 doForLoop();
 
 
 // ===========================================
-// 9️⃣ While Loop 🔁
+// 9️⃣ While Loop 🔂
 // ===========================================
-
-// Executes while the condition is TRUE
+// Used when you don’t know how many times to run the loop in advance.
 
 function doWhileLoop() {
   let i = 1;
@@ -169,47 +194,41 @@ function doWhileLoop() {
     i++;
   }
 }
-
 doWhileLoop();
 
 
 // ===========================================
-// 🔟 Do-While Loop 🔄
+// 🔟 Do-While Loop ♻️
 // ===========================================
-
-// Executes at least once before checking condition
+// Similar to while loop, but runs at least once.
 
 function doDoWhileLoop() {
   let i = 1;
   do {
-    console.log("Do-While Count:", i);
+    console.log("Do-While Loop Count:", i);
     i++;
   } while (i <= 5);
 }
-
 doDoWhileLoop();
 
 
 // ===========================================
-// 1️⃣1️⃣ For-In Loop 🧭
+// 1️⃣1️⃣ For-In Loop 🧾
 // ===========================================
-
-// Used to iterate over the properties of an object
+// Used to loop through object properties.
 
 let person = {
   name: "Karimul",
   nickname: ["Hassan", "Shuvo", "Korim Bhai"],
   cgpa: 3.33,
   semester: 9,
-
-  hisFather: {
+  father: {
     name: "Shoaib",
     age: 55,
   },
 };
 
-console.log("*********************************");
-
+console.log("********* Person Info *********");
 for (let key in person) {
   console.log(key, ":", person[key]);
 }
@@ -218,22 +237,5 @@ console.log("*********************************");
 
 
 // ===========================================
-// 🧮 Arrays in JavaScript
+// ✅ End of JavaScript Basics File
 // ===========================================
-
-// Arrays store multiple values in one variable
-let numbers = [1, 2, 3, 4];
-console.log(numbers);
-console.log("Second item:", numbers[1]);
-
-// For-Of Loop (to iterate array elements)
-for (let item of numbers) {
-  console.log("Array item:", item);
-}
-
-
-// ===========================================
-// 📘 END OF DOCUMENT
-// ===========================================
-
-console.log("✅ All JavaScript Basics Covered Successfully!");
