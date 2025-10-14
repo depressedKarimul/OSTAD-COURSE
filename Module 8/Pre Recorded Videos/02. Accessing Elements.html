@@ -1,0 +1,79 @@
+<!-- 02. Accessing Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+
+    <p class="description">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ut
+      temporibus voluptate dolor nesciunt nostrum atque vitae eligendi
+      assumenda. Veritatis nisi eos quos voluptatibus esse dicta necessitatibus
+      culpa voluptas quaerat!
+    </p>
+    <p class="description">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ut
+      temporibus voluptate dolor nesciunt nostrum atque vitae eligendi
+      assumenda. Veritatis nisi eos quos voluptatibus esse dicta necessitatibus
+      culpa voluptas quaerat!
+    </p>
+    <p class="description">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ut
+      temporibus voluptate dolor nesciunt nostrum atque vitae eligendi
+      assumenda. Veritatis nisi eos quos voluptatibus esse dicta necessitatibus
+      culpa voluptas quaerat!
+    </p>
+    <p class="description">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ut
+      temporibus voluptate dolor nesciunt nostrum atque vitae eligendi
+      assumenda. Veritatis nisi eos quos voluptatibus esse dicta necessitatibus
+      culpa voluptas quaerat!
+    </p>
+
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+
+    <button id="click-me">Click Me</button>
+    <button class="click-me">Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+
+    <script>
+      let titleElement = document.getElementById("title");
+      console.log(titleElement);
+
+      let descriptionElement = document.getElementsByClassName("description");
+
+      console.log(descriptionElement);
+      console.log(descriptionElement[1]);
+
+      let a_tag = document.getElementsByTagName("a");
+
+      console.log(a_tag);
+
+      let allButton = document.querySelectorAll("button");
+
+      console.log(allButton);
+
+      let buttonId = document.querySelector("#click-me");
+      console.log(buttonId);
+
+      let buttonClass = document.querySelector(".click-me");
+      console.log(buttonClass);
+
+      let qButton = document.querySelector("button");
+
+      console.log(qButton);
+    </script>
+  </body>
+</html>
