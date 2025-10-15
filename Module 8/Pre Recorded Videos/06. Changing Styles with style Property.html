@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06. Changing Styles with style Property</title>
+</head>
+<body>
+
+
+  <h1 id="programming-language">I love JavaScript</h1>
+<button onclick="change()">Are You Sure?</button>
+
+<script>
+
+  function change(){
+    let loveProgramming = document.getElementById("programming-language");
+    console.log(loveProgramming);
+
+    loveProgramming.style.color ="red";
+    loveProgramming.style.fontSize ="100px";
+    loveProgramming.innerText = "Nooooooo"
+    
+
+  }
+
+</script>
+  
+</body>
+</html>
