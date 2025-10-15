@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding and Removing Classes with classList</title>
+
+  <style>
+    .dark {
+      background-color: rgba(64, 15, 15, 0.824);
+      color: #fff;
+    }
+    .btn {
+      background-color: orange;
+      width: 200px;
+      padding: 20px;
+      font-weight: 900;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body id="darkMOde">
+
+  <div class="dark-mode">
+    <button onclick="activeDarkMode()" class="btn">Dark Mode</button>
+  </div>
+
+  <h1> Hello World</h1>
+
+  <script>
+    function activeDarkMode() {
+
+      let darkEnable = document.getElementById("darkMOde");
+      console.log(darkEnable);
+      darkEnable.classList.toggle("dark");
+
+      
+
+    }
+
+   let button = document.getElementsByClassName("btn");
+button[0].classList.remove("btn");
+
+  </script>
+  
+</body>
+</html>
