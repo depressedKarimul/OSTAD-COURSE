@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03. Modifying Element Text using textContent and innerText</title>
+
+  <style>
+    .hidden-property {
+      display:none;
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <div id="context-1">
+    <p >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint.
+
+      <p class="hidden-property">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint.
+      </p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint.
+    </p>
+  </div> -->
+
+
+  <div id="context-2">
+    <p >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint.
+    </p>
+     <p  class="hidden-property">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sint.
+    </p>
+  </div>
+
+  <h3 id="love">I love  you</h3>
+
+
+  <script> 
+
+  let context2 = document.getElementById("context-2");
+  console.log(context2.innerText);
+  console.log(context2.textContent);
+
+
+let lovee = document.getElementById("love");
+console.log(lovee.textContent);
+
+  lovee.textContent = "Hello";
+
+
+  
+  
+
+
+
+  </script>
+  
+</body>
+</html>
