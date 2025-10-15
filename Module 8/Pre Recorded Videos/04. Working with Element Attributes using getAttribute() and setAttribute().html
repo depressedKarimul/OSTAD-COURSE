@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04. Working with Element Attributes using getAttribute() and setAttribute()</title>
+</head>
+<body>
+
+  <img id="img_id" src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=" alt="">
+  
+
+
+  <script>
+    let attributes = document.getElementById("img_id");
+    console.log(attributes.getAttribute("src"));
+    attributes.setAttribute("src","https://astrala.imgix.net/5HB4ncfT7vIL9uj9ApJlu8/2d29c258152e230682949ac076fcf869/gemini-zodiac-sign.jpg?w=1080&q=60&auto=format,compress")
+    
+  </script>
+</body>
+</html>
