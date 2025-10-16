@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>07. Creating New Elements using createElement().</title>
+  </head>
+  <body>
+    <input type="text" id="input-item" placeholder="Add Data" />
+    <button id="btn" onclick="addItem()">Add Data</button>
+
+    <div>
+      <ul id="add-data"></ul>
+    </div>
+
+    <script>
+      function addItem() {
+        const data = document.getElementById("input-item");
+
+        const newElement = document.createElement("li");
+
+        newElement.textContent = data.value;
+        document.getElementById("add-data").appendChild(newElement);
+
+        data.value = "";
+      }
+    </script>
+  </body>
+</html>
