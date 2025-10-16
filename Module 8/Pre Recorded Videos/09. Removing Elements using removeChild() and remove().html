@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09. Removing Elements using removeChild() and remove().</title>
+</head>
+<body>
+
+  <div >
+    <ul id="list-div">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Mango</li>
+    </ul>
+
+  </div>
+
+  <ol>
+    <li id="removeHer">Sumi</li>
+    <li>Nargis</li>
+    <li>Tania</li>
+    <li>Richi</li>
+  </ol>
+
+
+
+  <ol id="removeList">
+    <li> Bangladesh <button onclick="removeItem(0)">Delete</button>
+    <li> India <button onclick="removeItem(1)">Delete</button>
+    <li> Pakistan <button onclick="removeItem(2)">Delete</button>
+
+    </li>
+  </ol>
+
+
+
+  <script>
+    const list = document.getElementById("list-div");
+    // console.log(list);
+  const listItem = list.children[2];
+  // console.log(listItem);
+
+ list.removeChild(listItem);
+
+
+ const removeSumi = document.getElementById("removeHer");
+ removeSumi.remove();
+
+
+
+ function removeItem(num) {
+  const countryList = document.getElementById("removeList");
+  const removeCountryIndex = countryList.children[num];
+  countryList.removeChild(removeCountryIndex);
+ } 
+  
+    
+  </script>
+  
+</body>
+</html>
