@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains simple JavaScript code snippets demonstrating basic DOM (Document Object Model) manipulation techniques in the browser. The code focuses on selecting HTML elements using different methods provided by the `document` object and then updating their content dynamically.
+This repository contains simple JavaScript code snippets demonstrating basic DOM (Document Object Model) manipulation techniques in the browser. The code focuses on selecting HTML elements using different methods provided by the `document` object and then updating their content or styles dynamically.
 
 ### Key Concepts
 - **DOM Manipulation**: The DOM is a tree-like representation of your HTML document. JavaScript can interact with this tree to read, modify, or delete elements.
@@ -10,11 +10,14 @@ This repository contains simple JavaScript code snippets demonstrating basic DOM
   - `getElementById()`: Selects a single element by its unique `id` attribute.
   - `getElementsByTagName()`: Selects multiple elements by their HTML tag name (e.g., all `<h1>` tags).
   - `getElementsByClassName()`: Selects multiple elements by their `class` attribute.
+  - `querySelector()`: Selects the first element matching a CSS selector (e.g., `#id`, `.class`, `tag`, or combinations like `li a`).
+  - `querySelectorAll()`: Selects all elements matching a CSS selector, returning a static NodeList.
 - **Updating Content**: Once selected, we use the `innerHTML` property to change the text or HTML inside the element.
+- **Updating Styles**: Use the `style` property to modify CSS styles directly (e.g., `element.style.color = "red"`).
 
 These methods are foundational for building interactive web pages. The code is designed to run in a browser environment (e.g., via an HTML file with a `<script>` tag).
 
-**Note**: This code assumes a basic HTML structure with elements like `<h1 id="heading1">`, `<p id="para">`, multiple `<h1>` tags, and multiple `<p class="para1">` elements. Without matching HTML, the code may throw errors (e.g., trying to access an index that doesn't exist).
+**Note**: This code assumes a basic HTML structure with elements like `<h1 id="heading1">`, `<p id="para">`, multiple `<h1>` tags, multiple `<p class="para1">` elements, multiple `<p>` tags, `<li><a>` links, and a `<div class="my-div"><a>` structure. Without matching HTML, the code may throw errors (e.g., trying to access an index that doesn't exist).
 
 ## Prerequisites
 - A modern web browser (e.g., Chrome, Firefox).
@@ -50,13 +53,27 @@ Create a simple `index.html` file with elements that match the selectors in the 
     <p class="para1">First Para with Class</p>
     <p class="para1">Second Para with Class (Targeted)</p>
     
+    <!-- Additional elements for querySelector examples -->
+    <p id="pid">Paragraph with ID (Targeted - Commented)</p>
+    <p class="pid2">Paragraph with Class (Targeted - Commented)</p>
+    <p>First Paragraph</p>
+    <p>Second Paragraph (Targeted)</p>
+    
+    <ul>
+        <li><a href="#">Original List Link (Targeted)</a></li>
+    </ul>
+    
+    <div class="my-div">
+        <a href="#">Original Div Link</a>
+    </div>
+    
     <script src="script.js"></script>  <!-- Link to your JS file -->
 </body>
 </html>
 ```
 
 ### Step 2: Add the JavaScript
-Save the following as `script.js` (this is the provided code, cleaned up for clarity and execution):
+Save the following as `script.js` (this is the provided code, cleaned up for clarity and execution, with all examples integrated):
 
 ```javascript
 // Example 1: getElementById - Select by unique ID
@@ -73,6 +90,24 @@ document.getElementsByTagName("h1")[1].innerHTML = "Heyyyy";
 // Example 3: getElementsByClassName - Select by class name (returns a live HTMLCollection)
 // Access the second element with class "para1" (index 1) and update it
 document.getElementsByClassName("para1")[1].innerHTML = "Heyy duniyaa";
+
+// Example 4: querySelector - Select the first element matching a CSS selector
+// document.querySelector("#pid").innerHTML = "This is change";  // Targets by ID
+
+// document.querySelector(".pid2").innerHTML = "This is change 2";  // Targets by class
+
+// document.querySelector("p").innerHTML = "change";  // Targets first <p> tag
+
+// Example 5: querySelectorAll - Select all elements matching a CSS selector (returns a static NodeList)
+// Access the first <p> element (index 0) and update it
+document.querySelectorAll("p")[0].innerHTML = "change";
+
+// Example 6: querySelector with descendant selector - Targets <a> inside <li>
+document.querySelector("li a").innerHTML = "shuvo";
+
+// Example 7: querySelector with class and descendant selector - Targets <a> inside .my-div and update style
+let link = document.querySelector(".my-div a");
+link.style.color = "red";
 ```
 
 ### Step 3: Run the Code
@@ -82,8 +117,11 @@ document.getElementsByClassName("para1")[1].innerHTML = "Heyy duniyaa";
    - The paragraph with `id="para"` becomes "This is Heading 2".
    - The second `<h1>` becomes "Heyyyy".
    - The second `<p class="para1">` becomes "Heyy duniyaa".
+   - The first `<p>` (from querySelectorAll) becomes "change".
+   - The `<a>` inside `<li>` becomes "shuvo".
+   - The `<a>` inside `.my-div` turns red.
 
-**Pro Tip**: Uncomment the `getElementById` example in `script.js` to see it in action alongside the one-liner.
+**Pro Tip**: Uncomment the `getElementById` or `querySelector` examples in `script.js` to see them in action alongside the active lines.
 
 ## Detailed Explanation
 
@@ -131,19 +169,59 @@ document.getElementsByClassName("para1")[1].innerHTML = "Heyy duniyaa";
   - Similar to tag name, but targets classes (can have multiple classes per element).
 - **Modern Alternative**: Use `querySelectorAll('.para1')` for more flexible CSS-like selectors.
 
+### 4. `querySelector(selector)`
+- **Purpose**: Retrieves the **first** element that matches the provided CSS selector. Supports IDs (`#id`), classes (`.class`), tags (`p`), and complex selectors (e.g., `li a` for descendants, or `[attribute="value"]`).
+- **Returns**: A single `Element` object (or `null` if no match).
+- **Why Use It?**: Versatile and powerful—mimics CSS selectors for precise targeting without needing multiple methods.
+- **In the Code**:
+  ```javascript
+  // Examples (commented out for brevity; uncomment to test)
+  // document.querySelector("#pid").innerHTML = "This is change";  // First (or only) element with id="pid"
+  // document.querySelector(".pid2").innerHTML = "This is change 2";  // First element with class="pid2"
+  // document.querySelector("p").innerHTML = "change";  // First <p> element
+  
+  // Active example: Descendant selector
+  document.querySelector("li a").innerHTML = "shuvo";  // First <a> inside any <li>
+  
+  // Active example: Class + descendant
+  let link = document.querySelector(".my-div a");  // First <a> inside element with class="my-div"
+  link.style.color = "red";  // Changes inline style to red
+  ```
+- **Pro Tip**: For styles, `element.style.property = "value"` applies inline CSS. Use camelCase for properties (e.g., `backgroundColor` instead of `background-color`).
+
+### 5. `querySelectorAll(selector)`
+- **Purpose**: Retrieves **all** elements matching the CSS selector.
+- **Returns**: A static `NodeList` (array-like, but doesn't auto-update with DOM changes—safer for loops).
+- **Why Use It?**: Ideal for bulk operations on multiple matching elements.
+- **In the Code**:
+  ```javascript
+  document.querySelectorAll("p")[0].innerHTML = "change";  // First <p> from all <p> elements
+  ```
+  - `querySelectorAll("p")` grabs all `<p>` tags.
+  - `[0]` accesses the first one (0-indexed).
+- **Looping Example** (Bonus): To update all `<p>` tags:
+  ```javascript
+  var paragraphs = document.querySelectorAll("p");
+  for (var i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].innerHTML = "Updated Paragraph " + (i + 1);
+  }
+  ```
+- **Key Difference from Older Methods**: Unlike `getElementsByTagName` or `getElementsByClassName`, this returns a NodeList (not live), and supports full CSS syntax for more complex queries.
+
 ### Common Pitfalls
 - **Index Out of Bounds**: If you try `[1]` on a collection with only one item, it returns `undefined`. Always verify length: `if (collection[1]) { ... }`.
 - **Timing Issues**: Run JS after the DOM loads. Wrap in `<script>` at the end of `<body>` or use `window.onload = function() { /* code */ };`.
-- **Live Collections**: Changes to the DOM (e.g., adding new elements) will reflect in the collection automatically—handy but can cause loops if not careful.
-- **Security Note**: `innerHTML` can inject HTML, so sanitize user input to avoid XSS attacks.
+- **Live vs. Static Collections**: `getElementsBy*` are live (reflect DOM changes); `querySelectorAll` is static (snapshot at query time).
+- **Selector Specificity**: Ensure your CSS selectors match exactly—case-sensitive for classes/IDs.
+- **Security Note**: `innerHTML` can inject HTML, so sanitize user input to avoid XSS attacks. For styles, inline changes override external CSS but don't affect specificity.
 
 ## Extending the Code
 - **Add Event Listeners**: Make it interactive, e.g., `button.addEventListener('click', function() { /* update element */ });`.
-- **Modern Selectors**: Upgrade to `querySelector('#id')` or `querySelectorAll('.class')` for CSS-like power.
+- **Advanced Selectors**: Experiment with attributes (`[href*="google"]`), pseudo-classes (via libraries if needed), or nth-child (`p:nth-child(2)`).
 - **Testing**: Use browser DevTools to inspect elements and test snippets live.
 
 ## Contributing
-Feel free to fork this repo, add more examples (e.g., `querySelector`), or improve explanations. Pull requests welcome!
+Feel free to fork this repo, add more examples (e.g., `createElement` for dynamic content), or improve explanations. Pull requests welcome!
 
 ## License
 This project is open-source and free to use under the MIT License. See [LICENSE](LICENSE) for details (create one if needed).
